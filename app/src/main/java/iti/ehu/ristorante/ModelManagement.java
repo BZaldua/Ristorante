@@ -50,9 +50,9 @@ public class ModelManagement extends SQLiteOpenHelper {
         db.execSQL(CREATE_COMMAND_TABLE);
 
         //Crear tabla USUARIOS
-        String CREAT_USER_TABLE = "CREATE TABLE " + TABLE_USER + "(" + KEY_ID +
-                " INTEGER PRIMARY KEY," + USER_USERNAME + "TEXT, " + USER_PASSWORD + " TEXT)";
-        db.execSQL(CREAT_USER_TABLE);
+        String CREATE_USER_TABLE = "CREATE TABLE " + TABLE_USER + "(" + KEY_ID +
+                " INTEGER PRIMARY KEY," + USER_USERNAME + " TEXT, " + USER_PASSWORD + " TEXT)";
+        db.execSQL(CREATE_USER_TABLE);
 
     }
 
@@ -169,10 +169,10 @@ public class ModelManagement extends SQLiteOpenHelper {
     public boolean login(User user){
         SQLiteDatabase db = this.getReadableDatabase();
 
-        String selectQuery = "SELECT * FROM " + TABLE_USER + "WHERE username = " + user.getUserName() + "AND password = " + user.getPassword();
+        Cursor cursor = db.rawQuery("SELECT * FROM "+TABLE_USER + " WHERE username = '"+user.getUserName()
+                +"' AND password = '"+user.getPassword()+"'", null);
 
-        Cursor cursor = db.rawQuery(selectQuery, null);
-        if(cursor.getCount() != 1)
+        if(cursor.getCount() > 0)
             return true;
         return false;
     }
