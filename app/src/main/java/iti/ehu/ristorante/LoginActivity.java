@@ -1,7 +1,6 @@
 package iti.ehu.ristorante;
 
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +17,8 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.login);
 
         final ModelManagement db = new ModelManagement(this);
+
+        addStartingData(db); // Para añadir platos y usuarios
 
         loginButton = (Button) findViewById(R.id.btn_login);
 
@@ -42,4 +43,31 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
+
+    private void addStartingData(ModelManagement db){
+        /******
+         *  BORRAR DATOS DE LAS TABLAS
+         *  QUITAR PARA LA APLICACION FINAL
+         * ******/
+        db.dropTables();
+
+
+        /******
+         *  AÑADIR PLATOS A LA BASE DE DATOS
+         * ******/
+        Dish uno = new Dish(1, "Arroz", 2.0f);
+        Dish dos = new Dish(2, "Huevo", 1.0f);
+        Dish tres = new Dish(3, "Coulant de chocolate", 3.50f);
+        db.addDish(uno);
+        db.addDish(dos);
+        db.addDish(tres);
+
+        /*******
+         *  AÑADIR USUARIOS
+         *******/
+        User user = new User("ITI", "123456");
+        db.addUser(user);
+    }
+
 }
