@@ -23,17 +23,45 @@ public class MenuActivity extends AppCompatActivity {
         /****
          * BORRAR DESPUES DE ACABAR CON EL DISEÑO DE INTERFACES
          */
-        mListView = (ListView) findViewById(R.id.menu_list_view);
+        mListView = (ListView) findViewById(R.id.list_view_primeros);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
                 //context
                 MenuActivity.this,
                 //layout (view)
                 R.layout.menu_row,
                 //row (view)
-                R.id.row_text,
+                R.id.row_dish,
                     //data (model) with bogus data to test our listview
                 new String[]{"first record", "second record", "third record"});
         mListView.setAdapter(arrayAdapter);
+
+        mListView = (ListView) findViewById(R.id.list_view_segundos);
+        arrayAdapter = new ArrayAdapter<String>(
+                //context
+                MenuActivity.this,
+                //layout (view)
+                R.layout.menu_row,
+                //row (view)
+                R.id.row_dish,
+                //data (model) with bogus data to test our listview
+                new String[]{"first record", "second record", "third record"});
+        mListView.setAdapter(arrayAdapter);
+
+        mListView = (ListView) findViewById(R.id.list_view_postres);
+        arrayAdapter = new ArrayAdapter<String>(
+                //context
+                MenuActivity.this,
+                //layout (view)
+                R.layout.menu_row,
+                //row (view)
+                R.id.row_dish,
+                //data (model) with bogus data to test our listview
+                new String[]{"first record", "second record", "third record"});
+        mListView.setAdapter(arrayAdapter);
+
+
+
+
 
         final ModelManagement db = new ModelManagement(this);
 

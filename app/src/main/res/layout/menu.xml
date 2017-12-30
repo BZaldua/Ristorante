@@ -5,29 +5,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="MenuActivity">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true">
+        android:layout_height="match_parent">
 
-        <ListView
-            android:id="@+id/menu_list_view"
-            android:layout_width="358dp"
-            android:layout_height="476dp"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/text_primeros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            tools:layout_editor_absoluteX="19dp"
-            tools:layout_editor_absoluteY="16dp"
-            tools:listitem="@layout/menu_row"
-            android:layout_alignParentEnd="true"
-            android:layout_above="@+id/process_button" />
+            android:layout_marginTop="20dp"
+            android:text="Primeros"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <ListView
+            android:id="@+id/list_view_primeros"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/text_primeros"
+            tools:listitem="@layout/menu_row"></ListView>
+
+        <TextView
+            android:id="@+id/text_segundos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/list_view_primeros"
+            android:layout_marginTop="51dp"
+            android:text="Segundos"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <ListView
+            android:id="@+id/list_view_segundos"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/text_segundos"
+            tools:listitem="@layout/menu_row"></ListView>
+
+        <TextView
+            android:id="@+id/text_postre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/list_view_segundos"
+            android:layout_marginTop="51dp"
+            android:text="Postres"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <ListView
+            android:id="@+id/list_view_postres"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/text_postre"
+            tools:listitem="@layout/menu_row"></ListView>
 
         <Button
             android:id="@+id/process_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ProcessMenu"
+            android:text="Procesar Menu"
+            android:layout_below="@id/list_view_postres"
             android:layout_marginStart="29dp"
             tools:layout_editor_absoluteY="503dp"
             tools:layout_editor_absoluteX="16dp"
@@ -35,21 +81,19 @@
             android:layout_alignParentStart="true"
             android:layout_marginBottom="18dp" />
 
-        <Button
-            android:id="@+id/clear_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/process_button"
-            android:layout_marginStart="25dp"
-            android:layout_toEndOf="@+id/process_button"
-            android:text="Clear"
-            tools:layout_editor_absoluteY="503dp"
-            tools:layout_editor_absoluteX="163dp" />
+            <Button
+                android:id="@+id/clear_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="27dp"
+                android:layout_toEndOf="@+id/process_button"
+                android:text="Clear"
+                tools:layout_editor_absoluteX="163dp"
+                tools:layout_editor_absoluteY="503dp" />
 
+        </RelativeLayout>
 
-    </RelativeLayout>
-
-
-
+    </ScrollView>
 
 </RelativeLayout>
