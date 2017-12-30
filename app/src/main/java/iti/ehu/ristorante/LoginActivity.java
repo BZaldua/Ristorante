@@ -1,5 +1,6 @@
 package iti.ehu.ristorante;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -35,7 +36,9 @@ public class LoginActivity extends AppCompatActivity {
                 User loginUser = new User(username, password);
 
                 if(db.login(loginUser)){
-                    Toast.makeText(LoginActivity.this, "Existe el usuario", Toast.LENGTH_SHORT).show(); //Sustituir por la pantalla de menu
+                    Intent i = new Intent(getApplicationContext(), MenuActivity.class);
+                    startActivity(i);
+                    //Toast.makeText(LoginActivity.this, "Existe el usuario", Toast.LENGTH_SHORT).show(); //Sustituir por la pantalla de menu
                 }else{
                     Toast.makeText(LoginActivity.this, "No existe el usuario", Toast.LENGTH_SHORT).show();
                 }
