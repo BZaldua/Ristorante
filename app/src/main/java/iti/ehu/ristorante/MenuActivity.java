@@ -13,7 +13,7 @@ public class MenuActivity extends AppCompatActivity {
 
     ListView mListView;
 
-    protected void onCrete(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu);
 
