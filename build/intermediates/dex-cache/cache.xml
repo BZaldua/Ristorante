@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/igor/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/home/igor/Documentos/iti/restaurant/Ristorante/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_af7b3494bb59cea47df8f1b80077e7c4ca04fff9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/igor/.android/build-cache/9659fd7415e1fc34b40e2a1e64d8ccd67c7ff955/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/home/igor/Documentos/iti/restaurant/Ristorante/app/build/intermediates/pre-dexed/debug/classes_34c8cf46b7fda7d324f4192e180102e24b481ec6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/igor/.android/build-cache/02aae47c02713bca75b2804f79e3e412847bc3fc/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/home/igor/Documentos/iti/restaurant/Ristorante/app/build/intermediates/pre-dexed/debug/classes_bbde136740f7e38c3c0cbd380ad600a286dba273.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/igor/.android/build-cache/ebe51cb6bdfe9bc7f7ad24a6b56e0e095edc4310/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/home/igor/Documentos/iti/restaurant/Ristorante/app/build/intermediates/pre-dexed/debug/classes_f8061e2c3d8b6d6abcf0c68365824977e67c8f3b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/igor/.android/build-cache/b050464576cbfafc421b8882b8c2b7685c2ea97d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/home/igor/Documentos/iti/restaurant/Ristorante/app/build/intermediates/pre-dexed/debug/classes_acf51b274b7ac47a0efa3e9dee0765d95734c769.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/igor/Android/Sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/home/igor/Documentos/iti/restaurant/Ristorante/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_07b3c655357be28e2665b39ba8b0f79d6991d663.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/igor/.android/build-cache/f6399a55c5f69ee0c9644bee3adf1e3c065d7c28/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/home/igor/Documentos/iti/restaurant/Ristorante/app/build/intermediates/pre-dexed/debug/classes_437e0940eef5b1fcf7928a7fc62cea6559c96fd1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/igor/.android/build-cache/ebe51cb6bdfe9bc7f7ad24a6b56e0e095edc4310/output/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/home/igor/Documentos/iti/restaurant/Ristorante/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_b7744f349972d5ae350629a81eb911770e23054a.jar" />
+    </item>
+
+</items>

@@ -39,5 +39,7 @@ public class MenuActivity extends AppCompatActivity {
 
         List<Dish> dishes = db.getDishes();    // Datos recuperados de la BBDD
 
+
+
     }
 }
