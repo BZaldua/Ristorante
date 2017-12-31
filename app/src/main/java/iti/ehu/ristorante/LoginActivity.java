@@ -59,12 +59,28 @@ public class LoginActivity extends AppCompatActivity {
         /******
          *  AÑADIR PLATOS A LA BASE DE DATOS
          * ******/
-        Dish uno = new Dish(1, "Arroz", 2.0f);
-        Dish dos = new Dish(2, "Huevo", 1.0f);
-        Dish tres = new Dish(3, "Coulant de chocolate", 3.50f);
-        db.addDish(uno);
-        db.addDish(dos);
-        db.addDish(tres);
+        Dish primero1 = new Dish(1, "Arroz", 2.0f);
+        Dish segundo1 = new Dish(2, "Huevo", 1.0f);
+        Dish postre1 = new Dish(3, "Coulant de chocolate", 3.50f);
+        db.addDish(primero1);
+        db.addDish(segundo1);
+        db.addDish(postre1);
+
+        Dish primero2 = new Dish(1, "Lentejas", 3.0f);
+        Dish segundo2 = new Dish(2, "Filete", 4.0f);
+        Dish postre2 = new Dish(3, "Tiramisú", 3.50f);
+        db.addDish(primero2);
+        db.addDish(segundo2);
+        db.addDish(postre2);
+
+        Dish primero3 = new Dish(1, "Ensalada mixta", 2.0f);
+        Dish segundo3 = new Dish(2, "Pollo al horno", 2.50f);
+        Dish postre3 = new Dish(3, "Fruta natural", 2f);
+        db.addDish(primero3);
+        db.addDish(segundo3);
+        db.addDish(postre3);
+
+
 
         /*******
          *  AÑADIR USUARIOS

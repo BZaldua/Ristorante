@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-        <TextView
+            <TextView
             android:id="@+id/text_primeros"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
