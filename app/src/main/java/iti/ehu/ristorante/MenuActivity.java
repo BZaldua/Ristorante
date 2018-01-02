@@ -168,8 +168,38 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //borramos todos los contadores de los platos
 
+                ListView lv = (ListView)findViewById(R.id.list_view_primeros);
+                int count = lv.getAdapter().getCount();
 
+                for (int i = 0; i < count; i++)
+                {
+                    ViewGroup row = (ViewGroup) lv.getChildAt(i);
+                    TextView texto = (TextView) row.findViewById(R.id.row_num);
+                    int valor_num = 0;
+                    texto.setText(String.valueOf(valor_num));
+                }
 
+                lv = (ListView)findViewById(R.id.list_view_segundos);
+                count = lv.getAdapter().getCount();
+
+                for (int i = 0; i < count; i++)
+                {
+                    ViewGroup row = (ViewGroup) lv.getChildAt(i);
+                    TextView texto = (TextView) row.findViewById(R.id.row_num);
+                    int valor_num = 0;
+                    texto.setText(String.valueOf(valor_num));
+                }
+
+                lv = (ListView)findViewById(R.id.list_view_postres);
+                count = lv.getAdapter().getCount();
+
+                for (int i = 0; i < count; i++)
+                {
+                    ViewGroup row = (ViewGroup) lv.getChildAt(i);
+                    TextView texto = (TextView) row.findViewById(R.id.row_num);
+                    int valor_num = 0;
+                    texto.setText(String.valueOf(valor_num));
+                }
             }
         });
 
