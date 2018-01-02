@@ -1,24 +1,19 @@
 package iti.ehu.ristorante;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.CursorIndexOutOfBoundsException;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class MenuActivity extends AppCompatActivity {
@@ -59,7 +54,6 @@ public class MenuActivity extends AppCompatActivity {
             }
         }
 
-
         final ArrayList<String> primeros_aux = new ArrayList<>();
         for (Dish d : primeros) {
             primeros_aux.add(d.getName() + " (" + d.getPrice() + ")" );
@@ -87,9 +81,6 @@ public class MenuActivity extends AppCompatActivity {
                 texto.setText(String.valueOf(valor_num));
             }
         });
-
-
-
 
         ArrayList<String> segundos_aux = new ArrayList<>();
         for (Dish d : segundos) {
@@ -119,8 +110,6 @@ public class MenuActivity extends AppCompatActivity {
                 texto.setText(String.valueOf(valor_num));
             }
         });
-
-
 
         ArrayList<String> postres_aux = new ArrayList<>();
         for (Dish d : postres) {
@@ -154,10 +143,61 @@ public class MenuActivity extends AppCompatActivity {
         processButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    Intent i = new Intent(getApplicationContext(), CommandActivity.class);
-                    startActivity(i);
-                    //Toast.makeText(LoginActivity.this, "Existe el usuario", Toast.LENGTH_SHORT).show(); //Sustituir por la pantalla de menu
 
+
+                HashMap<String, Integer> comanda = new HashMap<String, Integer>();
+
+
+                int count = mListViewPrimeros.getAdapter().getCount();
+                for (int i = 0; i < count; i++)
+                {
+                    ViewGroup row = (ViewGroup) mListViewPrimeros.getChildAt(i);
+                    TextView unidades = (TextView) row.findViewById(R.id.row_num);
+                    int uni = Integer.parseInt(unidades.getText().toString());
+                    TextView nombre = (TextView) row.findViewById(R.id.row_dish);
+                    String nombrePlato = nombre.getText().toString();
+                    if(uni > 0){
+                        comanda.put(nombrePlato,uni);
+                    }
+                }
+
+                count = mListViewSegundos.getAdapter().getCount();
+                for (int i = 0; i < count; i++)
+                {
+                    ViewGroup row = (ViewGroup) mListViewSegundos.getChildAt(i);
+                    TextView unidades = (TextView) row.findViewById(R.id.row_num);
+                    int uni = Integer.parseInt(unidades.getText().toString());
+                    TextView nombre = (TextView) row.findViewById(R.id.row_dish);
+                    String nombrePlato = nombre.getText().toString();
+                    if(uni > 0){
+                        comanda.put(nombrePlato,uni);
+                    }
+                }
+
+                count = mListViewPostres.getAdapter().getCount();
+                for (int i = 0; i < count; i++)
+                {
+                    ViewGroup row = (ViewGroup) mListViewPostres.getChildAt(i);
+                    TextView unidades = (TextView) row.findViewById(R.id.row_num);
+                    int uni = Integer.parseInt(unidades.getText().toString());
+                    TextView nombre = (TextView) row.findViewById(R.id.row_dish);
+                    String nombrePlato = nombre.getText().toString();
+                    if(uni > 0){
+                        comanda.put(nombrePlato,uni);
+                    }
+                }
+
+                System.out.println("El tamaño es:" + comanda.size());
+
+                if(comanda.size()!= 0){
+                    Intent i = new Intent(getApplicationContext(), CommandActivity.class);
+                    i.putExtra("comanda", comanda);
+                    startActivity(i);
+                }
+                else
+                {
+                    Toast.makeText(MenuActivity.this, "Por favor, seleccione al menos un plato", Toast.LENGTH_SHORT).show();
+                }
 
             }
         });

@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\ehu\Desktop\Ristorante\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="02641fb4e19a808fb44251d32100ef76bb4eb6aa">
-        <dex dex="C:\Users\ehu\Desktop\Ristorante\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_59d8b3485af3c6d6013096fadf9077511426e046\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\ehu\Desktop\Ristorante\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="C:\Users\Clara\Desktop\Ristorante\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
         sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
-        <dex dex="C:\Users\ehu\Desktop\Ristorante\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_414223afefeadb98b15a344430db29bbb4696096\classes.dex" />
+        <dex dex="C:\Users\Clara\Desktop\Ristorante\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_47381aca64d4e5d6502e838f310acfb1dfaad14b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Clara\Desktop\Ristorante\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6f4b299922387ef810054e58f0fe891bb23dbf77">
+        <dex dex="C:\Users\Clara\Desktop\Ristorante\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_50db3d4f938f57464c512be7e3b5eb6d7d36cc2a\classes.dex" />
     </item>
 
 </items>
