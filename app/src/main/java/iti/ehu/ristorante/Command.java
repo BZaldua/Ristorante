@@ -29,6 +29,15 @@ public class Command {
         return text;
     }
 
+    public Dish getDish(String name) {
+        String text = "";
+        for(Dish d:dishList){
+            if (d.getName().equals(name))
+                return d;
+        }
+        return null;
+    }
+
     public void setDish(ArrayList<Dish> dishList) {
         this.dishList = dishList;
     }

@@ -1,14 +1,21 @@
 package iti.ehu.ristorante;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.CursorIndexOutOfBoundsException;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -53,7 +60,7 @@ public class MenuActivity extends AppCompatActivity {
         }
 
 
-        ArrayList<String> primeros_aux = new ArrayList<>();
+        final ArrayList<String> primeros_aux = new ArrayList<>();
         for (Dish d : primeros) {
             primeros_aux.add(d.getName() + " (" + d.getPrice() + ")" );
         }
@@ -71,18 +78,17 @@ public class MenuActivity extends AppCompatActivity {
         mListViewPrimeros.setAdapter(arrayAdapter);
 
         /// click en botones
+        mListViewPrimeros.setAdapter(arrayAdapter);
         mListViewPrimeros.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
             @Override
-            public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
-
-                Toast.makeText(MenuActivity.this, "Pulsado posicion" + position + parent.getId(), Toast.LENGTH_SHORT).show();
-                ListView lv = (ListView) findViewById(parent.getId());
-//                lv.getItemAtPosition(position);
-
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id_row) {
+                TextView texto = (TextView) view.findViewById(R.id.row_num);
+                int valor_num = Integer.parseInt(texto.getText().toString())+1;
+                texto.setText(String.valueOf(valor_num));
             }
-
         });
+
+
 
 
         ArrayList<String> segundos_aux = new ArrayList<>();
@@ -104,14 +110,14 @@ public class MenuActivity extends AppCompatActivity {
         mListViewSegundos.getHeight();
 
         /// click en botones
+        mListViewSegundos.setAdapter(arrayAdapter);
         mListViewSegundos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
             @Override
-            public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
-
-                Toast.makeText(MenuActivity.this, "Pulsado posicion" + position + parent.getId(), Toast.LENGTH_SHORT).show();
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id_row) {
+                TextView texto = (TextView) view.findViewById(R.id.row_num);
+                int valor_num = Integer.parseInt(texto.getText().toString())+1;
+                texto.setText(String.valueOf(valor_num));
             }
-
         });
 
 
@@ -134,22 +140,17 @@ public class MenuActivity extends AppCompatActivity {
         mListViewPostres.setAdapter(arrayAdapter);
 
         /// click en botones
+        mListViewPostres.setAdapter(arrayAdapter);
         mListViewPostres.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                Toast.makeText(MenuActivity.this, "Pulsado posicion" + position + parent.getId(), Toast.LENGTH_SHORT).show();
-
-
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id_row) {
+                TextView texto = (TextView) view.findViewById(R.id.row_num);
+                int valor_num = Integer.parseInt(texto.getText().toString())+1;
+                texto.setText(String.valueOf(valor_num));
             }
-
         });
 
         Button processButton = (Button) findViewById(R.id.process_button);
-
-
-
         processButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -160,6 +161,18 @@ public class MenuActivity extends AppCompatActivity {
 
             }
         });
+
+        Button clearButton = (Button) findViewById(R.id.clear_button);
+        clearButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //borramos todos los contadores de los platos
+
+
+
+            }
+        });
+
 
 
 
