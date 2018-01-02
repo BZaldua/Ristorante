@@ -3,21 +3,93 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Clara\Documents\ristorante\Ristorante\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="C:\Users\ehu\.android\build-cache\8d04a58537f1a989f8c16254e8c7c1e238e99e96\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
-        sha1="0d3e7f7cd77599a479955cc09270fe4634354e44">
-        <dex dex="C:\Users\Clara\Documents\ristorante\Ristorante\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_3ce35efc7bb4221e49ba91f1f5fdf59ba5a1a9a9\classes.dex" />
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\ehu\Desktop\Ristorante\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_26b59872f7f83a44381114c2a33252087f195f40\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Clara\Documents\ristorante\Ristorante\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="C:\Android\android-sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\ehu\Desktop\Ristorante\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_6df549dec261401c9c5cc9c61f7dc87a938df543\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ehu\.android\build-cache\18d8b6d399c0b5fe8e487b1d485475cca2668600\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\ehu\Desktop\Ristorante\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_11dbac33b391644491ba3453259c5730e52034bf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ehu\.android\build-cache\92f5f3b67c621ed06a822cc9cb9e9523b9a766aa\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\ehu\Desktop\Ristorante\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_96a19ed3f5163db064a5f723eac25b67814d1f80\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ehu\Desktop\Ristorante\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="86acb2a873eb6fb713b74c7d9488c31e7e58cffe">
+        <dex dex="C:\Users\ehu\Desktop\Ristorante\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_59d8b3485af3c6d6013096fadf9077511426e046\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ehu\.android\build-cache\f7c3ed6bb00dd7700a0ecb34245482ebe822803c\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\ehu\Desktop\Ristorante\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_fb2cc9090d48710b4b12ee7c247c83e7b0e1a082\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ehu\Desktop\Ristorante\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
         sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
-        <dex dex="C:\Users\Clara\Documents\ristorante\Ristorante\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_710ec5b770ac2f160369ca8338b6b4bb6c07d420\classes.dex" />
+        <dex dex="C:\Users\ehu\Desktop\Ristorante\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_414223afefeadb98b15a344430db29bbb4696096\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\android-sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="C:\Users\ehu\Desktop\Ristorante\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_f6126d844204af6518b3b626ef25769c1f8a5482\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ehu\.android\build-cache\2c51641fcbe012d54af85e2ed72dca5585b193ef\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\ehu\Desktop\Ristorante\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0efdb8ca288b2ee9c6c3a9ea503692ff7486f8eb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ehu\.android\build-cache\2c51641fcbe012d54af85e2ed72dca5585b193ef\output\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\Users\ehu\Desktop\Ristorante\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_1b6c80d0e787821ad83cb948fdbbe4a1ee9bc24f\classes.dex" />
     </item>
 
 </items>

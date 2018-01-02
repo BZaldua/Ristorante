@@ -15,7 +15,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MenuActivity"></activity>
+        <activity android:name=".MenuActivity" />
+        <activity
+            android:name=".CommandActivity"
+            android:label="@string/title_activity_command"></activity>
     </application>
 
 </manifest>

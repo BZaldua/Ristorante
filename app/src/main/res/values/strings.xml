@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Ristorante</string>
+    <string name="title_activity_command">CommandActivity</string>
 </resources>

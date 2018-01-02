@@ -1,10 +1,13 @@
 package iti.ehu.ristorante;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -141,6 +144,21 @@ public class MenuActivity extends AppCompatActivity {
 
             }
 
+        });
+
+        Button processButton = (Button) findViewById(R.id.process_button);
+
+
+
+        processButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                    Intent i = new Intent(getApplicationContext(), CommandActivity.class);
+                    startActivity(i);
+                    //Toast.makeText(LoginActivity.this, "Existe el usuario", Toast.LENGTH_SHORT).show(); //Sustituir por la pantalla de menu
+
+
+            }
         });
 
 
