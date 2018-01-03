@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.TextView;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -57,6 +59,8 @@ public class CommandActivity extends AppCompatActivity {
 
         mListViewCommand.setAdapter(adapter);
 
+        TextView text = (TextView) findViewById(R.id.text_total);
+        text.setText("Total: " + total + " €");
     }
 
 }
