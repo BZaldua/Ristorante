@@ -25,7 +25,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="20dp"
                 android:text="Comanda"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
 
 
             <ListView
@@ -35,6 +35,15 @@
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/text_command"
                 tools:listitem="@layout/menu_row"></ListView>
+
+            <TextView
+                android:id="@+id/text_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/list_view_command"
+
+                android:text="Total: "
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"/>
 
 
         </RelativeLayout>

@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.Serializable;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.InputMismatchException;
@@ -30,12 +31,17 @@ public class CommandActivity extends AppCompatActivity {
 
         System.out.println("Tamaño: " + comanda.size());
         ArrayList<String> command_aux = new ArrayList<String>();
-        ArrayList<Integer> unidad_aux = new ArrayList<Integer>();
+        ArrayList<Float> unidad_aux = new ArrayList<Float>();
+        float total = 0;
+        float precio_p = 0;
         Iterator it = comanda.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry e = (Map.Entry)it.next();
             command_aux.add(e.getKey().toString());
-            unidad_aux.add(Integer.parseInt(e.getValue().toString()));
+            unidad_aux.add(Float.parseFloat(e.getValue().toString()));
+            String[] s = (e.getKey().toString()).split("\\(");
+            String aux = s[1].substring(0,s[1].length()-1);
+            total  = total + (Float.parseFloat(e.getValue().toString()) * Float.parseFloat(aux));
             System.out.println(e.getKey() + " " + e.getValue());
         }
 
@@ -57,6 +63,11 @@ public class CommandActivity extends AppCompatActivity {
                 command_aux);
         mListViewCommand.setAdapter(arrayAdapter);
         mListViewCommand.getHeight();
+
+        TextView txt_total = (TextView) findViewById(R.id.text_total);
+        txt_total.setText("Total: " + total + " €");
+        //System.out.println("precio:" + total);
+
 
 
 
