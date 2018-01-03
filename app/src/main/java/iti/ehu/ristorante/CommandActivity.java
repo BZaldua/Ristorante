@@ -1,21 +1,12 @@
 package iti.ehu.ristorante;
 
 import android.os.Bundle;
-import android.app.Activity;
-import android.support.v4.view.ViewGroupCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.InputMismatchException;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -28,7 +19,14 @@ public class CommandActivity extends AppCompatActivity {
 
         HashMap<String, Integer> comanda = (HashMap<String, Integer>) getIntent().getSerializableExtra("comanda");
 
-        System.out.println("Tamaño: " + comanda.size());
+
+        // Crear el ListView para la interfaz
+        ListView mListViewCommand = (ListView)findViewById(R.id.list_view_command);
+        ViewGroup.LayoutParams params = mListViewCommand.getLayoutParams();
+        params.height = 150 * comanda.size();
+
+
+        // Separar los datos de comanda
         ArrayList<String> command_aux = new ArrayList<String>();
         ArrayList<Integer> unidad_aux = new ArrayList<Integer>();
         Iterator it = comanda.entrySet().iterator();
@@ -39,26 +37,20 @@ public class CommandActivity extends AppCompatActivity {
             System.out.println(e.getKey() + " " + e.getValue());
         }
 
-        //System.out.println("Tamaño: asdasda");
 
+        // Crear adapter para interfaz
+        ArrayList<Dish> dishes = new ArrayList<Dish>();
+        DishAdapter adapter = new DishAdapter(this, dishes);
 
-        ListView mListViewCommand = (ListView)findViewById(R.id.list_view_command);
-        ViewGroup.LayoutParams params = mListViewCommand.getLayoutParams();
-        params.height = 150 * comanda.size();
+        // Crear objetos para despues añadir al adapter
+        for(int i = 0; i < comanda.size(); i++){
+            Dish dish = new Dish();
+            dish.setName(command_aux.get(i));
+            dish.setPrice((float)unidad_aux.get(i));
+            adapter.add(dish);
+        }
 
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
-                //context
-                CommandActivity.this,
-                //layout (view)
-                R.layout.menu_row,
-                //row (view)
-                R.id.row_dish,
-                //data (model) with bogus data to test our listview
-                command_aux);
-        mListViewCommand.setAdapter(arrayAdapter);
-        mListViewCommand.getHeight();
-
-
+        mListViewCommand.setAdapter(adapter);
 
     }
 
