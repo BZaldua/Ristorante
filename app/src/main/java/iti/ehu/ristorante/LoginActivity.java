@@ -53,7 +53,9 @@ public class LoginActivity extends AppCompatActivity {
          *  BORRAR DATOS DE LAS TABLAS
          *  QUITAR PARA LA APLICACION FINAL
          * ******/
-        db.dropTables();
+        //db.dropTables();
+        db.dropUsers();
+        db.dropDishes();
 
 
         /******

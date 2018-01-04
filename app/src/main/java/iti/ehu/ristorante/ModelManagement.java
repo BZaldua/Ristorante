@@ -154,6 +154,18 @@ public class ModelManagement extends SQLiteOpenHelper {
         db.execSQL(deleteQueryUsers);
     }
 
+    public void dropUsers(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        String deleteQueryUsers = "DELETE FROM "+TABLE_USER;
+        db.execSQL(deleteQueryUsers);
+    }
+
+    public void dropDishes(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        String deleteQueryDishes = "DELETE FROM " + TABLE_DISHES;
+        db.execSQL(deleteQueryDishes);
+    }
+
     public void addUser(User user){
         SQLiteDatabase db = this.getWritableDatabase();
 
