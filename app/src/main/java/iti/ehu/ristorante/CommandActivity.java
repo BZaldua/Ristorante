@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import android.content.Intent;
 
 public class CommandActivity extends AppCompatActivity {
 
@@ -65,7 +66,7 @@ public class CommandActivity extends AppCompatActivity {
         // Crear adapter para interfaz
         ArrayList<Dish> dishes = new ArrayList<Dish>();
         DishAdapter adapter = new DishAdapter(this, dishes);
-        
+
         // Crear objetos para despues añadir al adapter
         for(int i = 0; i < comanda.size(); i++){
             Dish dish = new Dish();
@@ -92,6 +93,14 @@ public class CommandActivity extends AppCompatActivity {
                 System.out.println("Guardado");
 
                 Toast.makeText(CommandActivity.this, "Se ha generado la factura y se ha enviado el menu a cocina", Toast.LENGTH_SHORT).show();
+
+                Intent ventana = new Intent(getApplicationContext(), MenuActivity.class);
+                //finishActivity(100);
+                //CommandActivity.super.onDestroy();
+                //finishActivityFromChild(CommandActivity.class,100);
+                //finishActivity(100);
+                finish();
+                startActivity(ventana);
             }
         });
     }

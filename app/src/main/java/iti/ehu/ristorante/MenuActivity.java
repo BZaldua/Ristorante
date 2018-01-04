@@ -192,7 +192,9 @@ public class MenuActivity extends AppCompatActivity {
                 if(comanda.size()!= 0){
                     Intent i = new Intent(getApplicationContext(), CommandActivity.class);
                     i.putExtra("comanda", comanda);
-                    startActivity(i);
+                    //startActivityForResult(i, 100);
+                    //startActivity(i);
+                    startActivityForResult(i,100);
                 }
                 else
                 {
